@@ -288,7 +288,7 @@
     state: "{{ item.state | default('present') }}"
     comment: "{{ item.comment | default(omit) }}"
   with_items: "{{ pve_groups }}"
-  when: "not pve_cluster_enabled or (pve_cluster_enabled | bool and inventory_hostname == _init_node)"
+  when: "not pve_cluster_enabled | bool or (pve_cluster_enabled | bool and inventory_hostname == _init_node)"
 
 - name: Configure Proxmox user accounts
   proxmox_user:
