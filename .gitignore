@@ -1,0 +1,14 @@
+.*.swp
+*.*~*
+*.bak
+
+/ansible.cfg
+/.ansible
+*.retry
+/.project
+/.pydevproject
+
+fetch/
+.vagrant/
+/.settings/
+**/__pycache__
