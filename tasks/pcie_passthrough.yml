@@ -80,6 +80,7 @@
           vfio
           vfio_iommu_type1
           vfio_pci
+          vfio_virqfd
 
     - name: Modify modules list for GVT-g
       ansible.builtin.blockinfile:
